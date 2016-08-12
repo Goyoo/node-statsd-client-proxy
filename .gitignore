@@ -1,0 +1,6 @@
+node_modules/
+config/config_current.js
+npm-debug.log
+ignoreme_*
+.DS_Store
+.idea/
