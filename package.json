@@ -1,0 +1,22 @@
+{
+  "name": "node-statsd-client-proxy",
+  "version": "0.0.1",
+  "description": "Proxy client for node to send data tp multiple statsd instances",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "statsd",
+    "client",
+    "proxy"
+  ],
+  "author": "Guillaume Verbal",
+  "license": "ISC",
+  "dependencies": {
+    "hashring": "^3.2.0",
+    "statsd-client": "^0.2.2",
+    "underscore": "^1.8.3"
+  }
+}
