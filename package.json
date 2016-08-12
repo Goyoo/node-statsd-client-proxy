@@ -1,7 +1,7 @@
 {
   "name": "node-statsd-client-proxy",
   "version": "0.0.1",
-  "description": "Proxy client for node to send data tp multiple statsd instances",
+  "description": "Proxy client for node to send data to multiple statsd instances",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
