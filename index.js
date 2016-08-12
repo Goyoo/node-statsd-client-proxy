@@ -35,10 +35,26 @@ ProxyWrapper.prototype.getNodeFromKey = function getNodeFromKey(key)
     return this.nodeMap[this.ring.get(key)];
 };
 
-ProxyWrapper.prototype.increment = function increment(key)
+var methods = [
+    'increment',
+    'decrement',
+    'counter',
+    'gaugeDelta',
+    'gauge',
+    'set',
+    'raw',
+];
+
+for (var i = 0; i < methods.length; i++)
 {
-    var node = this.getNodeFromKey(key);
-    return node.increment.apply(node, arguments);
-};
+    ProxyWrapper.prototype[methods[i]] = (function (method)
+    {
+        return function (key)
+        {
+            var node = this.getNodeFromKey(key);
+            return node[method].apply(node, arguments);
+        };
+    })(methods[i]);
+}
 
 module.exports = ProxyWrapper;
